@@ -1,9 +1,13 @@
-#include"calc.h"
-float x, y;
-char p;
-float result;
-float calc(float x, float y) {
-	switch (p) {
+#include "calc.h"
+
+#include <iostream> 
+
+float calc(float x, float y, char op) {
+
+	float result=0;
+
+	switch (op) 
+	{
 	case '+': result = x + y;
 		break;
 	case '-': result = x - y;
@@ -16,7 +20,9 @@ float calc(float x, float y) {
 	return result;
 }
 void calculus() {
-	std::cin >> x >> p >> y;
-	calc(x, y);
+	float op;
+	float x, y;
+	std::cin >> x >> op >> y;
+	float result = calc(x,y,op);
 	std::cout << result << std::endl;
 }
