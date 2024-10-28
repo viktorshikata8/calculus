@@ -20,8 +20,9 @@ float calc(float x, float y, char op) {
 	return result;
 }
 void calculus() {
-	float op;
-	float x, y;
+	char op = 0;
+	float x = 0;
+	float y=0;
 	std::cin >> x >> op >> y;
 	float result = calc(x,y,op);
 	std::cout << result << std::endl;
